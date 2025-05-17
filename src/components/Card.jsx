@@ -1,8 +1,8 @@
-export default function Card() {
+export default function Card({gifURL, title}) {
   return (
     <div className="card">
-      <img src={null} alt="" />
-      <p></p>
+      <img src={gifURL} alt={title} />
+      <p>{title}</p>
     </div>
   );
 }
