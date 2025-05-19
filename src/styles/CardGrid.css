@@ -4,6 +4,7 @@ div#card-grid {
     gap: 1rem;
     padding: 2rem;
     min-width: fit-content;
+    min-height: 70vh;
     background: linear-gradient(to bottom,rgb(25, 46, 34), rgb(18, 93, 50));
     color: white;
 }

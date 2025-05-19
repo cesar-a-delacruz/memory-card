@@ -12,9 +12,15 @@ export default function gifFetcher() {
         return response.json();
     })
     .then(function(response) {
-        gifs = response.data;
+        if (!response.ok) 
+            throw new Error(`${response.meta.status}, ${response.meta.msg}`);
+        else
+            gifs = response.data;
         return;
-    });
+    })
+    .catch(function(error) {
+        alert(error);
+    })
     return gifs;
 }
 
