@@ -1,3 +1,4 @@
+import '../styles/ScoreTable.css';
 export default function ScoreTable() {
   return (
     <table>
