@@ -1,3 +1,4 @@
+import '../styles/Header.css';
 import ScoreTable from "./ScoreTable";
 export default function Header() {
   return (

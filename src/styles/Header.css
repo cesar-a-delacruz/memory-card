@@ -1,0 +1,24 @@
+div#header {
+    background: linear-gradient(to bottom,rgb(10, 49, 27), rgb(22, 140, 73));
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    gap: 2rem;
+}
+
+div.main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.main-text > * {
+    margin-top: 0;
+}
+div.main-text p {
+    margin-bottom: 0;
+    font-size: large;
+}
