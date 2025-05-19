@@ -1,0 +1,9 @@
+div#card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    min-width: fit-content;
+    background: linear-gradient(to bottom,rgb(25, 46, 34), rgb(18, 93, 50));
+    color: white;
+}

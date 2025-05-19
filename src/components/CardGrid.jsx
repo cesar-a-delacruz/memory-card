@@ -1,3 +1,4 @@
+import '../styles/CardGrid.css';
 import { useEffect, useState } from "react";
 import gifFetcher from "../data/gifFetcher";
 import Card from "./Card";
