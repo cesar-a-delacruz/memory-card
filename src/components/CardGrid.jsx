@@ -8,10 +8,9 @@ export default function CardGrid() {
 
   useEffect(() => {
     setGifs(gifFetcher());
-  });
+  }, []);
 
   for (let i = 0; i < gifs.length; i++) {
-    console.log(gifs);
     cards[i] = <Card key={gifs[i].id} gifURL={gifs[i].images.original.url} title={gifs[i].title} />;
   }
   
