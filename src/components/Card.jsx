@@ -1,3 +1,4 @@
+import '../styles/Card.css';
 export default function Card({gifURL, title}) {
   return (
     <div className="card">
