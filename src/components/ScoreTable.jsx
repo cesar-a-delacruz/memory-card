@@ -1,5 +1,5 @@
 import "../styles/ScoreTable.css";
-export default function ScoreTable({scores}) {
+export default function ScoreTable({ scores }) {
   return (
     <table>
       <thead>

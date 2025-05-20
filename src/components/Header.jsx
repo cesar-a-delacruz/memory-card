@@ -1,6 +1,6 @@
 import "../styles/Header.css";
 import ScoreTable from "./ScoreTable";
-export default function Header({scores}) {
+export default function Header({ scores }) {
   return (
     <div id="header">
       <div className="main-text">
