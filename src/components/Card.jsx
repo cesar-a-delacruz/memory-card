@@ -1,5 +1,5 @@
-import '../styles/Card.css';
-export default function Card({gifURL, title}) {
+import "../styles/Card.css";
+export default function Card({ gifURL, title }) {
   return (
     <div className="card">
       <img src={gifURL} alt={title} />
