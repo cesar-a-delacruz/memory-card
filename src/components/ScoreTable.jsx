@@ -1,4 +1,4 @@
-import '../styles/ScoreTable.css';
+import "../styles/ScoreTable.css";
 export default function ScoreTable() {
   return (
     <table>

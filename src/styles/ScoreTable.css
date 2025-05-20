@@ -1,10 +1,10 @@
 table {
-    font-size: large;
-    text-align: center;
-    background-color: aliceblue;
+  font-size: large;
+  text-align: center;
+  background-color: aliceblue;
 }
 
 tr > * {
-    padding: 0.75rem;
-    background-color: rgb(21, 95, 53);
+  padding: 0.75rem;
+  background-color: rgb(21, 95, 53);
 }
