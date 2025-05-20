@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import * as gifHandler from "../data/gifHandler";
 import Card from "./Card";
 
-export default function CardGrid() {
+export default function CardGrid({ raiseScore }) {
   const [gifs, setGifs] = useState([]);
   const cards = [];
 
@@ -14,7 +14,6 @@ export default function CardGrid() {
   }, []);
 
   for (let i = 0; i < gifs.length; i++) {
-    console.log(i);
     cards[i] = (
       <Card
         key={gifs[i].id}
@@ -29,5 +28,6 @@ export default function CardGrid() {
 
   function randomizeGifs() {
     setGifs(gifHandler.randomize());
+    raiseScore();
   }
 }

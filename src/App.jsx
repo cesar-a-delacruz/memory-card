@@ -9,11 +9,11 @@ export default function App() {
   return (
     <>
       <Header scores={scores} />
-      <CardGrid changeScores={changeScores} />
+      <CardGrid raiseScore={raiseScore} />
     </>
   );
 
-  function changeScores() {
+  function raiseScore() {
     setScores({ ...scores, score: scores.score + 1 });
   }
 }
