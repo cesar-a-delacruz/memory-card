@@ -1,6 +1,6 @@
 import "../styles/CardGrid.css";
 import { useEffect, useState } from "react";
-import gifFetcher from "../data/gifFetcher";
+import * as gifHandler from "../data/gifHandler";
 import Card from "./Card";
 
 export default function CardGrid() {
@@ -8,20 +8,26 @@ export default function CardGrid() {
   const cards = [];
 
   useEffect(() => {
-    gifFetcher().then(function (response) {
-      setGifs(response);
+    gifHandler.fetch().then(function () {
+      setGifs(gifHandler.randomize());
     });
   }, []);
 
   for (let i = 0; i < gifs.length; i++) {
+    console.log(i);
     cards[i] = (
       <Card
         key={gifs[i].id}
         gifURL={gifs[i].images.original.url}
         title={gifs[i].title}
+        randomizeGifs={randomizeGifs}
       />
     );
   }
 
   return <div id="card-grid">{cards.map((card) => card)}</div>;
+
+  function randomizeGifs() {
+    setGifs(gifHandler.randomize());
+  }
 }
