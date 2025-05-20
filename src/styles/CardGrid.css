@@ -1,10 +1,12 @@
 div#card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    padding: 2rem;
-    min-width: fit-content;
-    min-height: 70vh;
-    background: linear-gradient(to bottom,rgb(25, 46, 34), rgb(18, 93, 50));
-    color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2rem;
+  min-width: fit-content;
+  min-height: 70vh;
+  background: linear-gradient(to bottom, rgb(21, 28, 24), rgb(27, 35, 30));
+  color: white;
 }
