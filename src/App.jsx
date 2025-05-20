@@ -1,16 +1,21 @@
-import { StrictMode } from "react";
+import { StrictMode, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./App.css";
 import Header from "./components/Header";
 import CardGrid from "./components/CardGrid";
 
 export default function App() {
+  const [scores, setScores] = useState({ score: 0, bestScore: 0 });
   return (
     <>
-      <Header />
-      <CardGrid />
+      <Header scores={scores} />
+      <CardGrid changeScores={changeScores} />
     </>
   );
+
+  function changeScores() {
+    setScores({ ...scores, score: scores.score + 1 });
+  }
 }
 
 createRoot(document.getElementById("root")).render(

@@ -1,5 +1,5 @@
 import "../styles/ScoreTable.css";
-export default function ScoreTable() {
+export default function ScoreTable({scores}) {
   return (
     <table>
       <thead>
@@ -10,8 +10,8 @@ export default function ScoreTable() {
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>1</td>
+          <td>{scores.score}</td>
+          <td>{scores.bestScore}</td>
         </tr>
       </tbody>
     </table>
