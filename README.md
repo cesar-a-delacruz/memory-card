@@ -2,6 +2,8 @@
 ## Description
 In this project, i have created a game in which the users get points by clicking on an gif only once.
 
+**[Check it here](https://cesar-a-delacruz-memory-card.netlify.app/)**
+
 ### Screenshot
 ![screenshot](./public/screenshot.png)
 
