@@ -3,22 +3,24 @@ import { useEffect, useState } from "react";
 import * as gifHandler from "../data/gifHandler";
 import Card from "./Card";
 
-export default function CardGrid({ raiseScore }) {
-  const [gifs, setGifs] = useState([]);
+export default function CardGrid({ raiseScore, resetScore }) {
+  const [cardsData, setCardsData] = useState({ gifs: [], clicked: [] });
   const cards = [];
 
   useEffect(() => {
     gifHandler.fetch().then(function () {
-      setGifs(gifHandler.randomize());
+      setCardsData({ ...cardsData, gifs: gifHandler.randomize() });
     });
   }, []);
 
-  for (let i = 0; i < gifs.length; i++) {
+  for (let i = 0; i < cardsData.gifs.length; i++) {
     cards[i] = (
       <Card
-        key={gifs[i].id}
-        gifURL={gifs[i].images.original.url}
-        title={gifs[i].title}
+        key={cardsData.gifs[i].id}
+        id={cardsData.gifs[i].id}
+        gifURL={cardsData.gifs[i].images.original.url}
+        title={cardsData.gifs[i].title}
+        clicked={false}
         randomizeGifs={randomizeGifs}
       />
     );
@@ -26,8 +28,22 @@ export default function CardGrid({ raiseScore }) {
 
   return <div id="card-grid">{cards.map((card) => card)}</div>;
 
-  function randomizeGifs() {
-    setGifs(gifHandler.randomize());
+  function randomizeGifs(id) {
+    if (doubleClicked(id)) return;
+    setCardsData({
+      gifs: gifHandler.randomize(),
+      clicked: [...cardsData.clicked, id],
+    });
     raiseScore();
+  }
+  function doubleClicked(id) {
+    for (const item of cardsData.clicked) {
+      if (item === id) {
+        resetScore();
+        setCardsData({ gifs: gifHandler.randomize(), clicked: [] });
+        return true;
+      }
+    }
+    return false;
   }
 }

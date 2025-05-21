@@ -9,12 +9,17 @@ export default function App() {
   return (
     <>
       <Header scores={scores} />
-      <CardGrid raiseScore={raiseScore} />
+      <CardGrid raiseScore={raiseScore} resetScore={resetScore} />
     </>
   );
 
   function raiseScore() {
     setScores({ ...scores, score: scores.score + 1 });
+  }
+  function resetScore() {
+    if (scores.bestScore < scores.score)
+      setScores({ score: 0, bestScore: scores.score });
+    else setScores({ ...scores, score: 0 });
   }
 }
 
