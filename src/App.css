@@ -4,3 +4,10 @@
 * {
   font-family: "Barlow", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+div#root {
+  max-width: 100vw;
+}
+div#root > * {
+  max-width: 100%;
+}

@@ -3,8 +3,8 @@ div#card-grid {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
   align-items: center;
-  gap: 2.5rem;
-  padding: 2rem;
+  gap: 3vw;
+  padding: 3vw;
   min-width: fit-content;
   min-height: 70vh;
   background: linear-gradient(to bottom, rgb(21, 28, 24), rgb(27, 35, 30));
