@@ -20,7 +20,6 @@ export default function CardGrid({ raiseScore, resetScore }) {
         id={cardsData.gifs[i].id}
         gifURL={cardsData.gifs[i].images.original.url}
         title={cardsData.gifs[i].title}
-        clicked={false}
         randomizeGifs={randomizeGifs}
       />
     );
